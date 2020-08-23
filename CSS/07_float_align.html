@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float & Align</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4em;
+    }
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+    }
+
+    .box {
+      background: grey;
+      border: 1px solid green;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+
+    .box p {
+      text-align: justify;
+    }
+
+    #box-2 {
+      float: left;
+      width: 70%;
+    }
+
+    #box-3 {
+      float: right;
+      width: 30%;
+    }
+
+    .clr {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="box-1" class="box">
+      <h3>Heading 1</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate officia doloremque voluptatem magnam, rem molestiae, eius facere quos amet deserunt, optio necessitatibus. Inventore, assumenda dicta. Dicta culpa saepe quis id!</p>
+    </div>
+    <div id="box-2" class="box">
+      <h3>Heading 2</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate officia doloremque voluptatem magnam, rem molestiae, eius facere quos amet deserunt, optio necessitatibus. Inventore, assumenda dicta. Dicta culpa saepe quis id!</p>
+    </div>
+    <div id="box-3" class="box">
+      <h3>Heading 3</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate officia doloremque voluptatem magnam, rem molestiae, eius facere quos amet deserunt, optio necessitatibus. Inventore, assumenda dicta. Dicta culpa saepe quis id!</p>
+    </div>
+    <div class="clr"></div>
+    <div id="box-4" class="box">
+      <h3>Heading 4</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate officia doloremque voluptatem magnam, rem molestiae, eius facere quos amet deserunt, optio necessitatibus. Inventore, assumenda dicta. Dicta culpa saepe quis id!</p>
+    </div>
+  </div>
+</body>
+</html>
