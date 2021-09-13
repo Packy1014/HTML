@@ -1,0 +1,74 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.8;
+}
+
+#login-form-container {
+    margin: 50px auto;
+    max-width: 450px;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-size: 1.8rem;
+}
+
+main {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    background-color: #F5F5F5;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-item.vertical label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.form-item.vertical input {
+    width: 100%;
+    padding: 10px;
+    border: 1px #ddd solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form-item.vertical input:focus {
+    outline: none;
+    border: 2px #00BBFF solid;
+}
+
+.form-btn.vertical a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 20px;
+    background-color: #00BBFF;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.form-btn.vertical a:hover {
+    background-color: #0099ff;
+}
+
+footer {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-align: center;
+}
