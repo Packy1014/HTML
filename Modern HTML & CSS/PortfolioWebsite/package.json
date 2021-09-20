@@ -1,0 +1,14 @@
+{
+    "name": "portfoliowebsite",
+    "version": "1.0.0",
+    "description": "Portfolio website",
+    "main": "index.js",
+    "scripts": {
+        "sass": "node-sass -w scss/ -o dest/css/ --recursive"
+    },
+    "author": "Packy",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^6.0.1"
+    }
+}
