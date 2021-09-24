@@ -16,3 +16,20 @@ ul {
 image {
     width: 100%;
 }
+
+a {
+    text-decoration: none;
+}
+
+.bottom-line {
+    height: 2px;
+    width: 5rem;
+    background-color: #ffbc00;
+    margin: 0 auto 1rem auto;
+}
+
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
