@@ -1,0 +1,70 @@
+.content .report-table {
+    width: 100%;
+    overflow: auto;
+}
+
+.content .report-table table {
+    border-collapse: collapse;
+    text-align: center;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.content .report-table td {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    position: relative;
+}
+
+.content .report-table thead td, .content .report-table tfoot td {
+    padding: 5px;
+}
+
+.content .report-table thead tr i {
+    color: #A9E34B;
+}
+
+.content .report-table thead, .content .report-table tfoot {
+    background-color: #55608f;
+}
+
+.content .report-table tbody {
+    font-weight: 200;
+}
+
+.content .report-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.content .report-table tbody td:hover:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+}
+
+.content .report-table thead .floor-name {
+    background-color: #868E96;
+}
+
+.content .report-table tbody .weekend {
+    background-color: #F08C00;
+}
+
+.content .report-table tfoot .corridor-statistic {
+    background-color: #339AF0;
+}
+
+.content .report-table tfoot .block-statistic {
+    background-color: #BE4BDB;
+}
+
+.content .report-table tfoot .floor-statistic {
+    background-color: #40C057;
+}

@@ -1,0 +1,42 @@
+#report-time-picker {
+    background: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-left: 2px #00BBFF solid;
+    border-top: 2px #00BBFF solid;
+    border-bottom: 2px #00BBFF solid;
+    border-radius: 5px 0 0 5px;
+}
+
+.content .container {
+    margin: auto;
+    width: 100%;
+}
+
+.content .time-picker {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.content .nav-bar-btn {
+    border-radius: 0 5px 5px 0;
+}
+
+#report-chart {
+    width: 100%;
+    height: 550px;
+}
+
+.content .report-search, .content .report-table {
+    margin-bottom: 5rem;
+}
+
+.content .floor-plan {
+    width: 100%;
+    height: 800px;
+}
+
+.content .floor-plan.image-1f {
+    background: url('../img/1F_Detail.png') no-repeat center / contain;
+}

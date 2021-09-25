@@ -1,4 +1,5 @@
 .nav-bar {
+    z-index: 1;
     position: fixed;
     top: 0;
     width: 100%;
@@ -95,6 +96,7 @@
 }
 
 .side-bar {
+    z-index: 1;
     position: fixed;
     top: 70px;
     left: 0;
@@ -156,6 +158,7 @@
 }
 
 label .open, label .close {
+    z-index: 1;
     position: fixed;
     cursor: pointer;
     background-color: #00BBFF;
@@ -258,6 +261,7 @@ label .open:hover, label .close:hover {
 }
 
 .footer {
+    z-index: 1;
     transition: all 0.5s ease;
     position: fixed;
     bottom: 0px;

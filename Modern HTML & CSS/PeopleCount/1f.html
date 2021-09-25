@@ -7,8 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="js/echarts.js"></script>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="css/table.css">
     <title>Corridor</title>
 </head>
 
@@ -72,33 +79,537 @@
     </aside>
     <main class="content">
         <div class="container">
-            <h2 class="section-title">Location</h2>
+            <h2 class="section-title">Corridor</h2>
             <div class="bottom-line"></div>
-            <p class="lead">Corridor</p>
-            <div class="items">
-                <div class="item">
-                    <a href="1f.html">
-                        <div class="item-image"></div>
-                    </a>
+            <p class="lead">Report Chart</p>
+            <div class="report-search">
+                <div class="time-picker">
+                    <div id="report-time-picker">
+                        <i class="fa fa-calendar"></i>&nbsp;
+                        <span></span> <i class="fa fa-caret-down"></i>
+                    </div>
+                    <button class="nav-bar-btn"><i class="fas fa-search"></i>Search</button>
                 </div>
-                <div class="item">
-                    <a href="2f.html">
-                        <div class="item-image"></div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="3f.html">
-                        <div class="item-image"></div>
-                    </a>
-                </div>
+                <div id="report-chart"></div>
+            </div>
+            <div class="bottom-line"></div>
+            <p class="lead">Report Table</p>
+            <div class="report-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>FL</td>
+                            <td class="floor-name" colspan="24">1F</td>
+                        </tr>
+                        <tr>
+                            <td>Block</td>
+                            <td colspan="6">Block A</td>
+                            <td colspan="4">Block B</td>
+                            <td colspan="2">Block C</td>
+                            <td colspan="2">Block D</td>
+                            <td colspan="2">-</td>
+                            <td colspan="2">Block E</td>
+                            <td colspan="2">Block F</td>
+                            <td colspan="4">Block G</td>
+                        </tr>
+                        <tr>
+                            <td>Position</td>
+                            <td colspan="2">Cor1</td>
+                            <td colspan="2">Cor2</td>
+                            <td colspan="2">Cor36</td>
+                            <td colspan="2">Cor3</td>
+                            <td colspan="2">Cor4</td>
+                            <td colspan="2">Cor5</td>
+                            <td colspan="2">Cor6</td>
+                            <td colspan="2">Cor7</td>
+                            <td colspan="2">Cor8</td>
+                            <td colspan="2">Cor9</td>
+                            <td colspan="2">Cor10</td>
+                            <td colspan="2">Cor11</td>
+                        </tr>
+                        <tr>
+                            <td>Direction</td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-up"></td>
+                            <td><i class="fas fa-arrow-circle-down"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                            <td><i class="fas fa-arrow-circle-left"></i></td>
+                            <td><i class="fas fa-arrow-circle-right"></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/Sep/2021(Wed)</td>
+                            <td>4,524</td>
+                            <td>5,669</td>
+                            <td>4,363</td>
+                            <td>4,483</td>
+                            <td>3,265</td>
+                            <td>4,348</td>
+                            <td>3,445</td>
+                            <td>2,759</td>
+                            <td>6,437</td>
+                            <td>5,317</td>
+                            <td>1,018</td>
+                            <td>1,185</td>
+                            <td>4,142</td>
+                            <td>3,530</td>
+                            <td>419</td>
+                            <td>514</td>
+                            <td>20</td>
+                            <td>17</td>
+                            <td>3,157</td>
+                            <td>2,513</td>
+                            <td>317</td>
+                            <td>415</td>
+                            <td>581</td>
+                            <td>337</td>
+                        </tr>
+                        <tr>
+                            <td>02/Sep/2021(Thu)</td>
+                            <td>7,710</td>
+                            <td>9,038</td>
+                            <td>8,011</td>
+                            <td>7,512</td>
+                            <td>5,658</td>
+                            <td>7,856</td>
+                            <td>5,987</td>
+                            <td>5,364</td>
+                            <td>14,267</td>
+                            <td>11,158</td>
+                            <td>2,043</td>
+                            <td>2,664</td>
+                            <td>10,808</td>
+                            <td>8,531</td>
+                            <td>1,092</td>
+                            <td>1,471</td>
+                            <td>26</td>
+                            <td>28</td>
+                            <td>7,187</td>
+                            <td>5,623</td>
+                            <td>836</td>
+                            <td>1,588</td>
+                            <td>2,076</td>
+                            <td>1,200</td>
+                        </tr>
+                        <tr>
+                            <td>03/Sep/2021(Fri)</td>
+                            <td>6,299</td>
+                            <td>7,875</td>
+                            <td>6,623</td>
+                            <td>6,680</td>
+                            <td>4,846</td>
+                            <td>7,018</td>
+                            <td>4,711</td>
+                            <td>4,879</td>
+                            <td>13,807</td>
+                            <td>9,627</td>
+                            <td>1,687</td>
+                            <td>2,258</td>
+                            <td>8,528</td>
+                            <td>7,209</td>
+                            <td>778</td>
+                            <td>1,067</td>
+                            <td>21</td>
+                            <td>21</td>
+                            <td>5,753</td>
+                            <td>4,774</td>
+                            <td>559</td>
+                            <td>1,112</td>
+                            <td>1,526</td>
+                            <td>875</td>
+                        </tr>
+                        <tr class="weekend">
+                            <td>04/Sep/2021(Sat)</td>
+                            <td>5,793</td>
+                            <td>6,368</td>
+                            <td>5,581</td>
+                            <td>5,950</td>
+                            <td>4,115</td>
+                            <td>5,834</td>
+                            <td>4,161</td>
+                            <td>4,253</td>
+                            <td>9,889</td>
+                            <td>7,917</td>
+                            <td>1,640</td>
+                            <td>2,018</td>
+                            <td>7,542</td>
+                            <td>6,092</td>
+                            <td>754</td>
+                            <td>1,045</td>
+                            <td>24</td>
+                            <td>26</td>
+                            <td>5,137</td>
+                            <td>4,218</td>
+                            <td>602</td>
+                            <td>1,068</td>
+                            <td>1,312</td>
+                            <td>782</td>
+                        </tr>
+                        <tr class="weekend">
+                            <td>05/Sep/2021(Sun)</td>
+                            <td>6,091</td>
+                            <td>6,920</td>
+                            <td>6,966</td>
+                            <td>6,612</td>
+                            <td>4,356</td>
+                            <td>6,099</td>
+                            <td>4,380</td>
+                            <td>4,286</td>
+                            <td>11,392</td>
+                            <td>8,908</td>
+                            <td>1,731</td>
+                            <td>2,226</td>
+                            <td>8,663</td>
+                            <td>6,920</td>
+                            <td>801</td>
+                            <td>1,075</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>5,810</td>
+                            <td>4,898</td>
+                            <td>631</td>
+                            <td>1,163</td>
+                            <td>1,531</td>
+                            <td>922</td>
+                        </tr>
+                        <tr>
+                            <td>06/Sep/2021(Mon)</td>
+                            <td>3,087</td>
+                            <td>3,632</td>
+                            <td>2,933</td>
+                            <td>3,041</td>
+                            <td>2,353</td>
+                            <td>3,005</td>
+                            <td>2,390</td>
+                            <td>2,050</td>
+                            <td>4,323</td>
+                            <td>3,435</td>
+                            <td>688</td>
+                            <td>837</td>
+                            <td>2,857</td>
+                            <td>2,427</td>
+                            <td>205</td>
+                            <td>359</td>
+                            <td>19</td>
+                            <td>17</td>
+                            <td>2,337</td>
+                            <td>1,957</td>
+                            <td>248</td>
+                            <td>333</td>
+                            <td>425</td>
+                            <td>290</td>
+                        </tr>
+                        <tr>
+                            <td>07/Sep/2021(Tue)</td>
+                            <td>2,477</td>
+                            <td>2,856</td>
+                            <td>2,284</td>
+                            <td>2,460</td>
+                            <td>1,770</td>
+                            <td>2,384</td>
+                            <td>1,676</td>
+                            <td>1,665</td>
+                            <td>3,588</td>
+                            <td>2,760</td>
+                            <td>612</td>
+                            <td>600</td>
+                            <td>2,345</td>
+                            <td>2,010</td>
+                            <td>230</td>
+                            <td>276</td>
+                            <td>27</td>
+                            <td>12</td>
+                            <td>2,018</td>
+                            <td>1,607</td>
+                            <td>169</td>
+                            <td>276</td>
+                            <td>333</td>
+                            <td>179</td>
+                        </tr>
+                        <tr>
+                            <td>08/Sep/2021(Wed)</td>
+                            <td>3,477</td>
+                            <td>3,817</td>
+                            <td>2,596</td>
+                            <td>2,918</td>
+                            <td>2,039</td>
+                            <td>2,681</td>
+                            <td>2,098</td>
+                            <td>1,837</td>
+                            <td>3,833</td>
+                            <td>3,106</td>
+                            <td>665</td>
+                            <td>706</td>
+                            <td>2,598</td>
+                            <td>2,213</td>
+                            <td>256</td>
+                            <td>287</td>
+                            <td>30</td>
+                            <td>15</td>
+                            <td>2,145</td>
+                            <td>1,870</td>
+                            <td>173</td>
+                            <td>300</td>
+                            <td>350</td>
+                            <td>217</td>
+                        </tr>
+                        <tr>
+                            <td>09/Sep/2021(Thu)</td>
+                            <td>3,471</td>
+                            <td>4,307</td>
+                            <td>3,551</td>
+                            <td>3,650</td>
+                            <td>2,584</td>
+                            <td>3,386</td>
+                            <td>2,516</td>
+                            <td>2,250</td>
+                            <td>5,272</td>
+                            <td>4,162</td>
+                            <td>897</td>
+                            <td>960</td>
+                            <td>3,350</td>
+                            <td>2,814</td>
+                            <td>337</td>
+                            <td>419</td>
+                            <td>28</td>
+                            <td>21</td>
+                            <td>2,646</td>
+                            <td>2,035</td>
+                            <td>258</td>
+                            <td>329</td>
+                            <td>471</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td>10/Sep/2021(Fri)</td>
+                            <td>3,818</td>
+                            <td>4,683</td>
+                            <td>3,419</td>
+                            <td>3,685</td>
+                            <td>2,660</td>
+                            <td>3,676</td>
+                            <td>2,582</td>
+                            <td>2,444</td>
+                            <td>5,692</td>
+                            <td>4,191</td>
+                            <td>1,023</td>
+                            <td>1,131</td>
+                            <td>3,671</td>
+                            <td>3,101</td>
+                            <td>333</td>
+                            <td>403</td>
+                            <td>25</td>
+                            <td>28</td>
+                            <td>2,738</td>
+                            <td>2,248</td>
+                            <td>232</td>
+                            <td>392</td>
+                            <td>475</td>
+                            <td>278</td>
+                        </tr>
+                        <tr class="weekend">
+                            <td>11/Sep/2021(Sat)</td>
+                            <td>5,768</td>
+                            <td>7,372</td>
+                            <td>6,485</td>
+                            <td>6,090</td>
+                            <td>4,165</td>
+                            <td>5,789</td>
+                            <td>3,851</td>
+                            <td>3,763</td>
+                            <td>10,692</td>
+                            <td>7,820</td>
+                            <td>1,671</td>
+                            <td>1,988</td>
+                            <td>7,446</td>
+                            <td>5,922</td>
+                            <td>645</td>
+                            <td>920</td>
+                            <td>29</td>
+                            <td>26</td>
+                            <td>5,096</td>
+                            <td>4,086</td>
+                            <td>589</td>
+                            <td>984</td>
+                            <td>1,219</td>
+                            <td>854</td>
+                        </tr>
+                        <tr class="weekend">
+                            <td>12/Sep/2021(Sun)</td>
+                            <td>7,693</td>
+                            <td>9,505</td>
+                            <td>8,357</td>
+                            <td>8,289</td>
+                            <td>6,146</td>
+                            <td>8,630</td>
+                            <td>5,605</td>
+                            <td>6,273</td>
+                            <td>15,468</td>
+                            <td>12,117</td>
+                            <td>2,782</td>
+                            <td>3,447</td>
+                            <td>10,759</td>
+                            <td>8,714</td>
+                            <td>1,109</td>
+                            <td>1,434</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>7,140</td>
+                            <td>5,682</td>
+                            <td>766</td>
+                            <td>1,599</td>
+                            <td>2,185</td>
+                            <td>1,270</td>
+                        </tr>
+                        <tr>
+                            <td>13/Sep/2021(Mon)</td>
+                            <td>1,016</td>
+                            <td>1,040</td>
+                            <td>681</td>
+                            <td>741</td>
+                            <td>696</td>
+                            <td>779</td>
+                            <td>761</td>
+                            <td>583</td>
+                            <td>1,057</td>
+                            <td>955</td>
+                            <td>363</td>
+                            <td>340</td>
+                            <td>779</td>
+                            <td>683</td>
+                            <td>81</td>
+                            <td>136</td>
+                            <td>19</td>
+                            <td>17</td>
+                            <td>827</td>
+                            <td>594</td>
+                            <td>50</td>
+                            <td>86</td>
+                            <td>83</td>
+                            <td>43</td>
+                        </tr>
+                        <tr>
+                            <td>14/Sep/2021(Tue)</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tfoot>
+                            <tr class="corridor-statistic">
+                                <td>Monthly TTL</td>
+                                <td>61,224</td>
+                                <td>73,082</td>
+                                <td>61,850</td>
+                                <td>62,111</td>
+                                <td>44,653</td>
+                                <td>61,485</td>
+                                <td>44,163</td>
+                                <td>42,406</td>
+                                <td>105,717</td>
+                                <td>81,473</td>
+                                <td>16,820</td>
+                                <td>20,360</td>
+                                <td>73,488</td>
+                                <td>60,166</td>
+                                <td>7,040</td>
+                                <td>9,406</td>
+                                <td>313</td>
+                                <td>274</td>
+                                <td>51,991</td>
+                                <td>42,105</td>
+                                <td>5,430</td>
+                                <td>9,645</td>
+                                <td>12,567</td>
+                                <td>7,547</td>
+                            </tr>
+                            <tr class="block-statistic">
+                                <td>Block TTL</td>
+                                <td colspan="6">364,405</td>
+                                <td colspan="4">273,759</td>
+                                <td colspan="2">37,180</td>
+                                <td colspan="2">133,654</td>
+                                <td colspan="2">16,446</td>
+                                <td colspan="2">587</td>
+                                <td colspan="2">94,096</td>
+                                <td colspan="4">35,189</td>
+                            </tr>
+                            <tr class="block-statistic">
+                                <td>Block Ratio</td>
+                                <td colspan="6">16.1%</td>
+                                <td colspan="4">17.1%</td>
+                                <td colspan="2">2.3%</td>
+                                <td colspan="2">8.3%</td>
+                                <td colspan="2">1.0%</td>
+                                <td colspan="2">0.0%</td>
+                                <td colspan="2">5.9%</td>
+                                <td colspan="4">2.2%</td>
+                            </tr>
+                            <tr class="floor-statistic">
+                                <td>Floor TTL</td>
+                                <td colspan="24">955,316</td>
+                            </tr>
+                            <tr class="floor-statistic">
+                                <td>Floor Ratio</td>
+                                <td colspan="24">59.6%</td>
+                            </tr>
+                        </tfoot>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bottom-line"></div>
+            <p class="lead">Floorplan</p>
+            <div class="floor-plan image-1f">
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>Mirror Life &copy; 2021, All Rights Reserverd</p>
         </div>
     </footer>
+
+    <script type="text/javascript" src="js/timepicker.js"></script>
+    <script type="text/javascript" src="js/f1Report.js"></script>
 </body>
 
 </html>
